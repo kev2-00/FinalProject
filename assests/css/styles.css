@@ -1,0 +1,131 @@
+/* Google Cal Sans font import */
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cal Sans', sans-serif;
+  line-height: 1.5;
+  color: #2F4F4F; /* Dark green text */
+  background: url('../images/image1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+header {
+  padding: 1rem 0;
+  margin-top: 0.5in; /* ~1/2 inch from top */
+}
+
+nav {
+  background-color: #006400; /* Dark green */
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #FFFFE0; /* Pale yellow - corrected from #000000 */
+}
+
+/* Main content area */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+  width: 60%;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+  color: #006400; /* Dark green */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.content p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Image floating */
+.float-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 40%;
+  border-radius: 5px;
+}
+
+/* Clear float */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Footer styles */
+footer {
+  background-color: #006400; /* Dark green */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content {
+    width: 85%;
+    padding: 1.5rem;
+  }
+  
+  nav ul {
+    gap: 1rem;
+  }
+  
+  .float-right {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 100%;
+  }
+}
