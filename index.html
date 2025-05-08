@@ -11,33 +11,42 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap"
         rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <nav>
-            <div class="logo">Perzival</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Create Something <span class="accent">Extraordinary</span></h1>
-                <p>Elevate your digital presence with our innovative solutions and cutting-edge designs.</p>
-                <button class="cta-button">Get Started</button>
-            </div>
-        </section>
+        
+    </head>
+    
+    <body>
+        <header>
+            <nav>
+                <div class="logo">Perzival</div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+    
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Create Something <span class="accent">Extraordinary</span></h1>
+                    <p>Elevate your digital presence with our innovative solutions and cutting-edge designs.</p>
+                    <button class="cta-button" onclick="document.querySelector('dialog').showModal()">Get Started</button>
+                    <dialog class="plzwrk">
+                        <form method="dialog">
+                            <div class="form-group">
+                                <textarea placeholder="tell us about your project or business and we'll create it for you" maxlength="250" required></textarea>
+                            </div>
+                            <button class="submit-button" type="submit">Submit</button>
+                        </form>
+                    </dialog>
+                </div>
+            </section>
 
         <section class="features">
             <h2>Our Services</h2>
@@ -183,28 +192,7 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <div class="logo">Spectrum</div>
-                <p>Creating extraordinary digital experiences.</p>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                </ul>
-            </div>
-            <div class="footer-newsletter">
-                <h3>Stay Updated</h3>
-                <p>Subscribe to our newsletter for the latest updates.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email" required>
-                    <button type="submit">Subscribe</button>
-                </form>
-            </div>
+            <!-- Footer Content Here -->
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Perzival Designs. All rights reserved.</p>
@@ -231,10 +219,10 @@
             });
         });
 
-        // Form Submission Animation
-        const form = document.querySelector('.contact-form');
-        if (form) {
-            form.addEventListener('submit', function (e) {
+        // Contact Form Submission Animation
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
                 const button = this.querySelector('button[type="submit"]');
                 button.innerHTML = 'Message Sent!';
@@ -246,6 +234,20 @@
                 }, 3000);
             });
         }
+
+        // New Dialog Handling
+        const dialog = document.querySelector('dialog');
+        const projectForm = dialog.querySelector('form');
+        projectForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            dialog.close();
+            const heroContent = document.querySelector('.hero-content');
+            const startBtn = heroContent.querySelector('.cta-button');
+            if (startBtn) startBtn.remove();
+            const congrats = document.createElement('p');
+            congrats.textContent = "Congratulations, we'll get to work on your design";
+            heroContent.appendChild(congrats);
+        });
     </script>
 </body>
 
