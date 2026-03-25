@@ -1,0 +1,16 @@
+[
+  {
+    "id": 3,
+    "topic": "DMCA",
+    "scenario": "A cryptography researcher lawfully obtains a DRM-protected software product, makes a good-faith effort to request permission from the vendor, circumvents only what is necessary to study an encryption flaw, and publishes technical findings without releasing copyrighted content or a piracy tool.",
+    "correctAnswer": "Both",
+    "explanation": "This is the kind of narrow, good-faith research the DMCA tries to preserve through its encryption-research and security-testing exceptions. The researcher lawfully obtained the work, limited the circumvention to what was necessary, and shared the results in a way aimed at improving security rather than enabling infringement."
+  },
+  {
+    "id": 4,
+    "topic": "DMCA",
+    "scenario": "A security firm buys a DVD, uses a ripping tool to remove its access controls, copies the full decrypted movie to an internal server, and keeps that copy available for future team use without permission from the copyright owner.",
+    "correctAnswer": "Neither",
+    "explanation": "Buying the disc does not automatically allow circumvention of DRM or copying the full decrypted work. The DMCA broadly prohibits bypassing technological access controls, and narrow research exceptions do not cover making reusable full-content copies for general internal convenience. That also makes the choice ethically weak, because it goes far beyond the minimum needed for legitimate security analysis."
+  }
+]

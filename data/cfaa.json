@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "topic": "CFAA",
+    "scenario": "A security researcher notices that a company's web server has an open port with no authentication required. Out of curiosity, they access the server, poke around a few directories, find nothing sensitive, then send the company a responsible disclosure email explaining what they found. No data was copied or modified.",
+    "correctAnswer": "Ethical",
+    "explanation": "The motive may be good, but the access was still uninvited. Under the CFAA, accessing a computer without authorization can create legal risk even when the researcher causes no damage and later discloses the issue responsibly. Ethically, reporting the flaw helps the affected organization, but the safer legal path would have been to obtain permission before testing."
+  },
+  {
+    "id": 2,
+    "topic": "CFAA",
+    "scenario": "An employee uses their legitimate login to open an internal analytics dashboard they are already allowed to access, even though company policy says the tool should be used only for assigned work tasks. They do not bypass any technical controls or enter restricted folders.",
+    "correctAnswer": "Legal",
+    "explanation": "This is poor judgment and likely a policy violation, so it is not ethical. But after Van Buren v. United States, the CFAA does not treat every purpose-based misuse as a crime when the person is already entitled to access that part of the system. Here, the employee stayed inside areas their credentials allowed them to open."
+  }
+]

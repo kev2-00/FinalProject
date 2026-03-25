@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "topic": "Responsible Disclosure & Privacy",
+    "scenario": "A software vendor publishes a vulnerability disclosure policy that authorizes good-faith testing of its public web app, gives researchers a private reporting channel, and promises not to recommend legal action if they follow the policy. A researcher stays within scope, avoids collecting user data, and reports the issue privately.",
+    "correctAnswer": "Both",
+    "explanation": "This is a strong example of coordinated disclosure. The researcher has explicit authorization, follows the published rules, and limits the testing to what is needed to report the problem. That makes the conduct legally safer and ethically aligned with modern disclosure best practices."
+  },
+  {
+    "id": 6,
+    "topic": "Responsible Disclosure & Privacy",
+    "scenario": "A researcher finds a flaw in a public website with no disclosure policy, exploits it far enough to download a sample of real customer records 'for proof,' keeps a copy on a personal laptop, and posts screenshots online before contacting the vendor.",
+    "correctAnswer": "Neither",
+    "explanation": "Good-faith disclosure does not require collecting and retaining real customer data or publishing it before the affected organization can respond. Pulling personal records, keeping copies, and publicizing screenshots creates needless privacy harm and legal risk. Responsible disclosure should minimize access, avoid retention of sensitive data, and report privately first."
+  },
+  {
+    "id": 7,
+    "topic": "Responsible Disclosure & Privacy",
+    "scenario": "A mobile app shows a separate, plain-language prompt explaining that it will collect precise geolocation for targeted advertising, asks for affirmative consent before collection, and gives users an easy way to delete their data and stop sharing later.",
+    "correctAnswer": "Both",
+    "explanation": "Clear disclosure, affirmative consent, and meaningful user choice are much closer to both legal and ethical privacy practice. FTC guidance and enforcement actions repeatedly emphasize that precise geolocation is sensitive data and should not be collected or shared for secondary uses without transparent notice and consent."
+  },
+  {
+    "id": 8,
+    "topic": "Responsible Disclosure & Privacy",
+    "scenario": "A mobile app buries the sale of precise location data in paragraph 14 of a long Terms of Service, collects the data by default, and shares it with advertisers without any just-in-time prompt or separate opt-in.",
+    "correctAnswer": "Neither",
+    "explanation": "Burying sensitive data practices in fine print is a bad privacy design choice and a weak compliance posture. FTC guidance and recent orders involving precise geolocation stress the need for clear disclosure and affirmative consent, not passive acceptance through dense boilerplate."
+  }
+]

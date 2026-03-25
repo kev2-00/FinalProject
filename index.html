@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethics & Law Quiz</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:wght@700;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main id="app-main">
+    <section id="screen-home" class="screen">
+      <header class="app-header">
+        <span class="brand">QUIZLET</span>
+        <span class="tagline">Law And Ethics</span>
+      </header>
+
+      <div class="home-content">
+        <div class="home-hero">
+          <h1>Quiz Time</h1>
+          <p>
+            Select a topic below to begin. Read each scenario carefully and decide:
+            is the action <em>Ethical</em>, <em>Legal</em>, <em>Both</em>, or
+            <em>Neither</em>?
+          </p>
+        </div>
+
+        <div class="topic-cards">
+          <div class="topic-card card-select" aria-hidden="true">
+            <span class="card-label">Please</span>
+            <span class="card-label">Select</span>
+            <span class="card-label">Topic</span>
+            <span class="card-sublabel">&#8595;</span>
+          </div>
+
+          <button class="topic-card card-cfaa" data-topic="CFAA" type="button">
+            <span class="card-num">Topic 1</span>
+            <span class="card-name">CFAA</span>
+            <span class="card-count">2 scenarios</span>
+          </button>
+
+          <button class="topic-card card-dmca" data-topic="DMCA" type="button">
+            <span class="card-num">Topic 2</span>
+            <span class="card-name">DMCA</span>
+            <span class="card-count">2 scenarios</span>
+          </button>
+
+          <button
+            class="topic-card card-other"
+            data-topic="Responsible Disclosure & Privacy"
+            type="button"
+          >
+            <span class="card-num">Topic 3</span>
+            <span class="card-name">Responsible Disclosure &amp; Privacy</span>
+            <span class="card-count">4 scenarios</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen hidden" aria-hidden="true">
+      <header class="quiz-header">
+        <button id="btn-back-home" class="btn-back" type="button">&#8592; Topics</button>
+        <div class="quiz-meta">
+          <span id="quiz-topic-label" class="quiz-topic-pill">CFAA</span>
+          <span id="quiz-progress" aria-live="polite">Question 1 of 2</span>
+        </div>
+        <div class="quiz-score-display" aria-live="polite">
+          Score: <strong id="quiz-score">0</strong>
+        </div>
+      </header>
+
+      <div id="quiz-log" class="quiz-log"></div>
+    </section>
+
+    <section id="screen-results" class="screen hidden" aria-hidden="true">
+      <header class="app-header">
+        <span class="brand">QUIZLET</span>
+      </header>
+
+      <div class="results-content">
+        <div class="results-summary">
+          <h2>Quiz Complete</h2>
+          <div class="results-score-block">
+            <span id="results-score-fraction" class="score-fraction">0 / 0</span>
+            <span id="results-score-percent" class="score-percent">0%</span>
+          </div>
+          <p id="results-topic-label" class="results-topic">Topic: CFAA</p>
+        </div>
+
+        <div id="results-list" class="results-list"></div>
+
+        <button id="btn-play-again" class="btn-primary btn-play-again" type="button">
+          Try Another Topic
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/results.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>
