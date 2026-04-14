@@ -343,6 +343,18 @@ button.topic-card:focus-visible,
   text-transform: uppercase;
 }
 
+.card-source {
+  display: inline-flex;
+  margin-bottom: var(--space-md);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 999px;
+  background: var(--bg-dark);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .card-scenario {
   margin-bottom: var(--space-lg);
   color: var(--text-primary);
@@ -561,6 +573,16 @@ button.topic-card:focus-visible,
   color: var(--text-primary);
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+.result-source {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .result-answer-line {

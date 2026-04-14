@@ -128,6 +128,7 @@ function isValidQuestion(question) {
     question &&
     typeof question.id === 'number' &&
     typeof question.topic === 'string' &&
+    typeof question.chapter === 'string' &&
     typeof question.scenario === 'string' &&
     typeof question.correctAnswer === 'string' &&
     typeof question.explanation === 'string'
@@ -187,7 +188,7 @@ function loadQuestions(topicName) {
       [
         { type: 'strong', text: 'Could not load questions.', breakAfter: true },
         { text: `Question ${invalidQuestion.id || '(unknown)'} is missing required fields.`, breakAfter: true },
-        { type: 'small', text: 'Each question needs id, topic, scenario, correctAnswer, and explanation.' }
+        { type: 'small', text: 'Each question needs id, topic, chapter, scenario, correctAnswer, and explanation.' }
       ],
       'alert'
     );
@@ -278,6 +279,11 @@ function renderQuestion() {
   number.textContent = `Scenario ${currentIndex + 1}`;
   body.appendChild(number);
 
+  const source = document.createElement('p');
+  source.className = 'card-source';
+  source.textContent = q.chapter;
+  body.appendChild(source);
+
   const scenario = document.createElement('p');
   scenario.className = 'card-scenario';
   scenario.textContent = q.scenario;
@@ -348,6 +354,7 @@ function handleAnswer(questionData, selectedAnswer, cardEl) {
   answerHistory.push({
     id: questionData.id,
     topic: questionData.topic,
+    chapter: questionData.chapter,
     scenario: questionData.scenario,
     userAnswer: selectedAnswer,
     correctAnswer: questionData.correctAnswer,

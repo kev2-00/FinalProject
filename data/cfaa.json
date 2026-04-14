@@ -2,6 +2,7 @@
   {
     "id": 1,
     "topic": "CFAA",
+    "chapter": "Gray Hat Ch. 2 / Gift of Fire Ch. 5",
     "scenario": "A security researcher notices that a company's web server has an open port with no authentication required. Out of curiosity, they access the server, poke around a few directories, find nothing sensitive, then send the company a responsible disclosure email explaining what they found. No data was copied or modified.",
     "correctAnswer": "Ethical",
     "explanation": "The motive may be good, but the access was still uninvited. Under the CFAA, accessing a computer without authorization can create legal risk even when the researcher causes no damage and later discloses the issue responsibly. Ethically, reporting the flaw helps the affected organization, but the safer legal path would have been to obtain permission before testing."
@@ -9,8 +10,57 @@
   {
     "id": 2,
     "topic": "CFAA",
+    "chapter": "Gift of Fire Ch. 5",
     "scenario": "An employee uses their legitimate login to open an internal analytics dashboard they are already allowed to access, even though company policy says the tool should be used only for assigned work tasks. They do not bypass any technical controls or enter restricted folders.",
     "correctAnswer": "Legal",
     "explanation": "This is poor judgment and likely a policy violation, so it is not ethical. But after Van Buren v. United States, the CFAA does not treat every purpose-based misuse as a crime when the person is already entitled to access that part of the system. Here, the employee stayed inside areas their credentials allowed them to open."
+  },
+  {
+    "id": 9,
+    "topic": "CFAA",
+    "chapter": "Gray Hat Ch. 2",
+    "scenario": "A company hires a penetration-testing firm under a written contract. The tester stays inside the agreed scope, uses a temporary account supplied by the client, proves SQL injection by viewing one dummy record, and immediately reports the flaw.",
+    "correctAnswer": "Both",
+    "explanation": "This is what lawful ethical testing looks like: explicit authorization, limited proof, and prompt reporting. Under the CFAA, permission and scope matter. Ethically, the tester minimizes access and shows only what is needed to confirm risk."
+  },
+  {
+    "id": 10,
+    "topic": "CFAA",
+    "chapter": "Gray Hat Ch. 2",
+    "scenario": "A contractor whose project access was removed asks a coworker for their password, logs into the payroll system with that borrowed account, and downloads employee tax forms 'just to check whether their own paperwork is right.'",
+    "correctAnswer": "Neither",
+    "explanation": "Using someone else's credentials after your own access is revoked is classic unauthorized access. The payroll records are sensitive, the purpose is personal, and the contractor had no right to enter or copy that data. Both legally and ethically, this crosses the line."
+  },
+  {
+    "id": 11,
+    "topic": "CFAA",
+    "chapter": "Gift of Fire Ch. 5",
+    "scenario": "A graduate student uses a campus network account to automate the download of millions of journal articles from a subscription database, ignores rate limits, and moves the laptop into a locked closet after the service begins blocking the traffic.",
+    "correctAnswer": "Neither",
+    "explanation": "The combination of large-scale automated downloading, evasion of countermeasures, and concealment creates serious legal risk under the CFAA and related theories. Ethically, the conduct bypasses institutional limits and shifts the cost and disruption onto others, even if the student claims a public-interest motive."
+  },
+  {
+    "id": 12,
+    "topic": "CFAA",
+    "chapter": "Gray Hat Ch. 2",
+    "scenario": "During a documented outage, a system administrator uses an approved emergency account to restore a corrupted payroll database, opens only the tables needed to verify the backup, and records each step in the incident log.",
+    "correctAnswer": "Both",
+    "explanation": "The administrator has authorization, a legitimate operational reason, and an audit trail. That makes the access legally defensible and ethically responsible, because it is limited to the minimum needed to recover service and protect employees."
+  },
+  {
+    "id": 13,
+    "topic": "CFAA",
+    "chapter": "Gray Hat Ch. 2",
+    "scenario": "A former employee notices that their VPN account still works a week after termination. They log in from home and copy internal source code because they think they deserve a portfolio sample from the product they helped build.",
+    "correctAnswer": "Neither",
+    "explanation": "Once employment ends, leftover credentials do not create continuing permission. Logging in after termination to copy code is unauthorized access and misuse of confidential information. Ethically, it ignores the employer's clear boundary and exploits an administrative mistake."
+  },
+  {
+    "id": 14,
+    "topic": "CFAA",
+    "chapter": "Gift of Fire Ch. 5",
+    "scenario": "A bank employee uses a customer-service dashboard they are allowed to open to look up a celebrity customer's balance out of curiosity. They do not alter anything or share the information with anyone.",
+    "correctAnswer": "Legal",
+    "explanation": "This is a serious privacy and policy violation, so it is not ethical. But if the employee stayed within data their account was technically permitted to access, current CFAA reasoning after Van Buren suggests the misuse of information is not automatically the same as unlawful hacking. Other laws, regulations, or employment consequences may still apply."
   }
 ]

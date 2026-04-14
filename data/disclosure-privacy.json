@@ -2,6 +2,7 @@
   {
     "id": 5,
     "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gray Hat Ch. 3",
     "scenario": "A software vendor publishes a vulnerability disclosure policy that authorizes good-faith testing of its public web app, gives researchers a private reporting channel, and promises not to recommend legal action if they follow the policy. A researcher stays within scope, avoids collecting user data, and reports the issue privately.",
     "correctAnswer": "Both",
     "explanation": "This is a strong example of coordinated disclosure. The researcher has explicit authorization, follows the published rules, and limits the testing to what is needed to report the problem. That makes the conduct legally safer and ethically aligned with modern disclosure best practices."
@@ -9,6 +10,7 @@
   {
     "id": 6,
     "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gray Hat Ch. 3 / Gift of Fire Ch. 2",
     "scenario": "A researcher finds a flaw in a public website with no disclosure policy, exploits it far enough to download a sample of real customer records 'for proof,' keeps a copy on a personal laptop, and posts screenshots online before contacting the vendor.",
     "correctAnswer": "Neither",
     "explanation": "Good-faith disclosure does not require collecting and retaining real customer data or publishing it before the affected organization can respond. Pulling personal records, keeping copies, and publicizing screenshots creates needless privacy harm and legal risk. Responsible disclosure should minimize access, avoid retention of sensitive data, and report privately first."
@@ -16,6 +18,7 @@
   {
     "id": 7,
     "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gift of Fire Ch. 2",
     "scenario": "A mobile app shows a separate, plain-language prompt explaining that it will collect precise geolocation for targeted advertising, asks for affirmative consent before collection, and gives users an easy way to delete their data and stop sharing later.",
     "correctAnswer": "Both",
     "explanation": "Clear disclosure, affirmative consent, and meaningful user choice are much closer to both legal and ethical privacy practice. FTC guidance and enforcement actions repeatedly emphasize that precise geolocation is sensitive data and should not be collected or shared for secondary uses without transparent notice and consent."
@@ -23,8 +26,41 @@
   {
     "id": 8,
     "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gift of Fire Ch. 2",
     "scenario": "A mobile app buries the sale of precise location data in paragraph 14 of a long Terms of Service, collects the data by default, and shares it with advertisers without any just-in-time prompt or separate opt-in.",
     "correctAnswer": "Neither",
     "explanation": "Burying sensitive data practices in fine print is a bad privacy design choice and a weak compliance posture. FTC guidance and recent orders involving precise geolocation stress the need for clear disclosure and affirmative consent, not passive acceptance through dense boilerplate."
+  },
+  {
+    "id": 21,
+    "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gray Hat Ch. 3 / Gift of Fire Ch. 2",
+    "scenario": "A researcher finds an exposed voter-registration database with no published disclosure policy, views a single record header to confirm the leak, stops before downloading the table, and privately alerts the state agency with reproduction steps.",
+    "correctAnswer": "Ethical",
+    "explanation": "Without authorization, the researcher still carries legal risk, so this is not as safe as working under an approved disclosure policy. But ethically it is careful: the confirmation is minimal, no data is retained, and the report is private and actionable."
+  },
+  {
+    "id": 22,
+    "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gift of Fire Ch. 2",
+    "scenario": "A voice-assistant app collects microphone samples to improve speech recognition, then later uses those recordings to build ad-targeting profiles without a new notice or separate opt-in.",
+    "correctAnswer": "Neither",
+    "explanation": "This is a classic secondary-use problem. Users consented to one purpose, not another more intrusive one, and the undisclosed profiling creates privacy harm and weakens trust. That is ethically poor and legally risky."
+  },
+  {
+    "id": 23,
+    "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gift of Fire Ch. 2",
+    "scenario": "In a jurisdiction with no specific law banning the practice, a data broker buys precise location histories from apps and sells audience segments to clinics and lenders under a contract that allows resale.",
+    "correctAnswer": "Legal",
+    "explanation": "The transaction may be lawful in that hypothetical jurisdiction, which is why privacy law often feels behind the technology. Ethically, though, trading sensitive location patterns for profiling purposes is deeply troubling because people rarely understand or meaningfully control that downstream use."
+  },
+  {
+    "id": 24,
+    "topic": "Responsible Disclosure & Privacy",
+    "chapter": "Gray Hat Ch. 3",
+    "scenario": "A researcher privately reports a serious software flaw, works through a coordinator while the vendor builds a patch, and publishes a technical advisory only after a fix and mitigation guidance are available.",
+    "correctAnswer": "Both",
+    "explanation": "This follows the coordinated-disclosure model emphasized in Gray Hat Hacking. It gives users and vendors a fair chance to reduce harm first, which makes the process ethically sound and legally safer."
   }
 ]

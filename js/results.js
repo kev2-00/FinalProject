@@ -39,6 +39,11 @@ function showResults(history, finalScore, totalQuestions, topicName) {
     const scenarioText = document.createElement('p');
     scenarioText.className = 'result-scenario-text';
 
+    const sourceLine = document.createElement('span');
+    sourceLine.className = 'result-source';
+    sourceLine.textContent = entry.chapter;
+    scenarioText.appendChild(sourceLine);
+
     const scenarioLabel = document.createElement('strong');
     scenarioLabel.textContent = `Scenario ${index + 1}: `;
     scenarioText.appendChild(scenarioLabel);
